@@ -5,62 +5,218 @@
   <meta charset="UTF-8">
 
   <!-- Page title shown in browser tab and announced by screen readers -->
-  <title>Don Norman – CV</title>
+  <title>CV · Don Norman · HCI Pioneer</title>
+
+  <!-- ✅ STRICT MINIMAL CSS – ONLY ALLOWED PROPERTIES -->
+  <style>
+    /* Lab 01: Only color, background-color, font-family, font-size allowed */
+    body {
+      color: #1a1e24;
+      background-color: #f9fbfd;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 1.1rem;
+    }
+    
+    h1 {
+      color: #0a3143;
+      font-size: 2.2rem;
+    }
+    
+    h2 {
+      color: #1e4a5f;
+      font-size: 1.8rem;
+    }
+    
+    h3 {
+      color: #2c5f73;
+      font-size: 1.5rem;
+    }
+    
+    a {
+      color: #005f73;
+      background-color: transparent;
+    }
+    
+    a:hover {
+      color: #0a9396;
+      background-color: transparent;
+    }
+    
+    nav a {
+      font-family: 'Arial', 'Helvetica', sans-serif;
+      font-size: 1.05rem;
+    }
+    
+    /* Table styling – CV includes academic contributions */
+    table {
+      color: #001219;
+      background-color: #ffffff;
+      font-size: 1rem;
+    }
+    
+    th {
+      background-color: #e6eef0;
+      color: #00171f;
+      font-family: 'Arial', 'Helvetica', sans-serif;
+    }
+    
+    td {
+      background-color: #ffffff;
+      color: #1a1e24;
+    }
+    
+    caption {
+      font-size: 1.3rem;
+      color: #003d4d;
+      font-family: 'Arial', 'Helvetica', sans-serif;
+    }
+    
+    footer {
+      color: #4a5c66;
+      font-size: 0.95rem;
+    }
+    
+    /* ✅ Note: NO layout properties (margin, padding, border, width, display, position, flex, grid) */
+  </style>
 </head>
 <body>
 
-  <!-- Page header: identifies the page -->
+  <!-- ✅ Page header: identifies the page purpose -->
   <header>
-    <h1>Curriculum Vitae</h1>
+    <h1>Don Norman · Conceptual CV</h1>
+    <p>Human–Computer Interaction Philosopher · Cognitive Scientist · Design Advocate</p>
   </header>
 
-  <!-- Primary navigation: consistent across all pages -->
+  <!-- ✅ Primary navigation: consistent across all 5 pages -->
   <nav aria-label="Primary navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-
-      <!-- Current page is indicated using aria-current -->
+      <!-- ✅ Current page indicated with aria-current="page" (exactly one per page) -->
       <li><a href="cv.html" aria-current="page">CV</a></li>
-
       <li><a href="contact.html">Contact</a></li>
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
-      <li><a href="assignment01.html">Lab 01 Rules</a></li>
-
     </ul>
   </nav>
 
-  <!-- Main landmark: unique content of this page -->
+  <!-- ✅ Main landmark: primary content of this page -->
   <main>
-
+    
+    <!-- ✅ Biography section -->
     <section>
-      <h2>Education</h2>
+      <h2>Biography</h2>
+      <p><strong>Don Norman</strong> is a pioneer in the field of Human–Computer Interaction, known for his work on user-centered design, usability, and cognitive engineering. His book <em>The Design of Everyday Things</em> (1988) introduced the <strong>Action Cycle</strong> and the <strong>gulfs of execution and evaluation</strong> – foundational concepts for understanding interaction.</p>
+      <p>Norman's work bridges cognitive psychology and engineering, emphasizing that design should accommodate human capabilities and limitations. His concepts are central to Dix et al. Chapter 9 (Cognitive Frameworks) and inform the evaluation methods in Chapter 12.</p>
+    </section>
+    
+    <!-- ✅ Key Contributions table – accessible data table -->
+    <section>
+      <h2>Key Contributions to HCI</h2>
+      
+      <table>
+        <caption>Table 1: Don Norman's major intellectual contributions and their relevance to HCI</caption>
+        <thead>
+          <tr>
+            <th scope="col">Year</th>
+            <th scope="col">Contribution</th>
+            <th scope="col">Description</th>
+            <th scope="col">Relevance to Dix Ch.9 & 12</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1986</th>
+            <td><em>User-Centered System Design</em> (with Draper)</td>
+            <td>Advocated for designing systems around user needs, goals, and tasks rather than technical constraints.</td>
+            <td>Foundations of task analysis and user-centered design (Ch.9)</td>
+          </tr>
+          <tr>
+            <th scope="row">1988</th>
+            <td><strong>The Design of Everyday Things</strong><br>Action Cycle & Gulfs</td>
+            <td>Introduced the seven-stage action cycle: goal, plan, specify, execute, perceive, interpret, evaluate. Defined gulfs of execution and evaluation.</td>
+            <td><strong>Direct source</strong> for Norman's model in Ch.9 (pp. 161-165)</td>
+          </tr>
+          <tr>
+            <th scope="row">1990s</th>
+            <td>Information Appliances</td>
+            <td>Conceptualized appliances designed for single, focused purposes rather than general-purpose computers.</td>
+            <td>GOMS application domains and task-specific interfaces (Ch.12)</td>
+          </tr>
+          <tr>
+            <th scope="row">1998</th>
+            <td>The Invisible Computer</td>
+            <td>Argued that technology should become "invisible" – focused on tasks, not computers themselves.</td>
+            <td>Relates to evaluation gulf and transparency in interaction</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- ✅ Academic & Professional Positions -->
+    <section>
+      <h2>Academic & Professional Positions</h2>
+      
+      <article>
+        <h3>University of California, San Diego</h3>
+        <p><strong>Professor Emeritus</strong>, Cognitive Science & Psychology (1966–1993)</p>
+        <p>Established one of the first HCI programs. Founded the Department of Cognitive Science.</p>
+      </article>
+      
+      <article>
+        <h3>Apple Computer, Inc.</h3>
+        <p><strong>Fellow</strong> & Vice President of Advanced Technology (1993–1997)</p>
+        <p>Served as "User Experience Architect" – first executive-level UX role in major technology company. Advocated for user-centered design in product development.</p>
+      </article>
+      
+      <article>
+        <h3>Nielsen Norman Group</h3>
+        <p><strong>Co-founder</strong> & Principal Consultant (1998–present)</p>
+        <p>Co-founded with Jakob Nielsen. Consulting and advocacy for usability and evidence-based design.</p>
+      </article>
+      
+      <article>
+        <h3>Northwestern University</h3>
+        <p><strong>Professor</strong>, Computer Science (2001–2010)</p>
+        <p>Directed the Segal Design Institute, advancing design education in engineering.</p>
+      </article>
+    </section>
+    
+    <!-- ✅ Selected Publications (brief) -->
+    <section>
+      <h2>Selected Publications</h2>
       <ul>
-        <li>PhD in Psychology – University of Pennsylvania</li>
-        <li>BSc in Engineering – MIT</li>
+        <li><strong>1988</strong> – <em>The Design of Everyday Things</em> (Originally <em>The Psychology of Everyday Things</em>)</li>
+        <li><strong>1993</strong> – <em>Things That Make Us Smart</em></li>
+        <li><strong>1998</strong> – <em>The Invisible Computer</em></li>
+        <li><strong>2004</strong> – <em>Emotional Design</em></li>
+        <li><strong>2010</strong> – <em>Living with Complexity</em></li>
+      </ul>
+      <p><em>Note: This is a conceptual CV for Lab 01. Full bibliography available in Dix et al. references.</em></p>
+    </section>
+    
+    <!-- ✅ Relevance to Lab 01 -->
+    <section>
+      <h2>Relevance to Lab & Assignment 01</h2>
+      <p>Norman's work provides the <strong>cognitive framework</strong> for understanding interaction (Ch.9), while GOMS and KLM (Ch.12) provide <strong>engineering models</strong> for predicting expert performance. This CV demonstrates semantic HTML structure for biographical/academic content.</p>
+      
+      <ul>
+        <li><strong>Norman's Action Cycle</strong> → Analysis of gulfs in interaction</li>
+        <li><strong>Seven stages</strong> → Comparison with GOMS goals/operators</li>
+        <li><strong>User-centered design</strong> → Foundation for task analysis</li>
       </ul>
     </section>
-
-    <section>
-      <h2>Work Experience</h2>
-
-      <!-- Each role is grouped as a separate content unit -->
-      <article>
-        <h3>Professor of Cognitive Science</h3>
-        <p>University of California, San Diego</p>
-      </article>
-
-      <article>
-        <h3>Director, Design Lab</h3>
-        <p>Founder of the Nielsen Norman Group</p>
-      </article>
-    </section>
-
+    
   </main>
 
-  <!-- Footer contains supplementary navigation and meta information -->
+  <!-- ✅ Footer with semantic navigation -->
   <footer>
-    <p><a href="index.html">Back to Home</a></p>
+    <p>Conceptual CV for HCI Lab 01 · Strictly educational use · Content derived from Dix et al. Ch.9 & 12</p>
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="index.html">← Return to Home</a></li>
+        <li><a href="analysis.html">View Interaction Analysis →</a></li>
+      </ul>
+    </nav>
   </footer>
 
 </body>
