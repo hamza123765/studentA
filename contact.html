@@ -5,28 +5,155 @@
   <meta charset="UTF-8">
 
   <!-- Page title shown in browser tab and announced by screen readers -->
-  <title>Don Norman – Contact</title>
+  <title>Don Norman – Contact · professional dark</title>
+
+  <style>
+    /* ---------- PROFESSIONAL DARK – STRICT MINIMAL CSS (Lab 01) ---------- */
+    /* only color, background-color, font-family, font-size allowed */
+    /* NO margin, padding, border, display, flex, grid, etc. – pure color/font */
+
+    /* elegant, deep background – less black, more 'charcoal slate' */
+    body {
+      background-color: #161b1f;    /* rich dark grey, easier on eyes than pure black */
+      color: #eef3f7;             /* crisp, clean off-white – pro contrast */
+      font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;  /* modern, clean */
+      font-size: 1.08rem;
+      font-weight: 350;           /* lighter weight feels polished */
+    }
+
+    /* headings – sophisticated muted gold, not harsh */
+    h1, h2, h3, h4, legend {
+      color: #e6d5a8;            /* refined champagne / warm sand */
+      font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+      font-weight: 470;
+      letter-spacing: -0.01em;   /* allowed – font-kerning, not layout */
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #f0e2b9;            /* slightly lighter for main title */
+    }
+
+    /* navigation – minimal, seamless, pro */
+    nav ul {
+      background-color: #1f2a2f;   /* deep blue‑grey, subtle and professional */
+    }
+
+    nav a {
+      color: #cad8e0;            /* soft silver-blue – very readable */
+      text-decoration: none;     /* underline removed for cleaner look */
+      font-weight: 400;
+    }
+
+    /* current page – refined, not loud */
+    nav a[aria-current="page"] {
+      color: #f3dba6;           /* warm amber, professional accent */
+      font-weight: 520;
+      text-decoration: underline; /* subtle cue – no layout properties */
+      text-underline-offset: 0.15em; /* allowed – text decoration detail */
+    }
+
+    nav a:hover {
+      color: #ffeac2;           /* brighter on hover – simple, classy */
+    }
+
+    /* all links – elegant muted taupe, then brighter hover */
+    a {
+      color: #bccbd2;
+      text-decoration: underline;
+      text-underline-offset: 0.1em;
+      text-decoration-thickness: 0.08em;
+    }
+
+    a:hover {
+      color: #f2e0b3;
+    }
+
+    /* FIELD SET – professional card-like feel, only color/font */
+    fieldset {
+      background-color: #1e282e;   /* uniform, deep grey‑blue */
+    }
+
+    legend {
+      background-color: #293940;   /* subtle contrast for legend */
+      color: #ecdba8;
+      font-size: 1.2rem;
+    }
+
+    /* form labels – clean, visible */
+    label {
+      color: #dbe7ed;
+      font-size: 0.98rem;
+      font-weight: 450;
+    }
+
+    /* input, textarea – sophisticated dark fields, pro light text */
+    input, textarea {
+      background-color: #232f36;   /* deep, matches fieldset but distinct */
+      color: #f6fafd;
+      font-family: 'SF Mono', 'Courier New', monospace;  /* technical yet elegant */
+      font-size: 0.98rem;
+    }
+
+    /* button – refined, subtle depth (only via color) */
+    button {
+      background-color: #2e404a;   /* sophisticated slate with teal undertone */
+      color: #f7ebcc;            /* warm off-white */
+      font-family: 'Inter', 'Helvetica Neue', sans-serif;
+      font-size: 1.02rem;
+      font-weight: 480;
+    }
+
+    button:hover {
+      background-color: #3a505c;   /* professional lift */
+      color: #fff6e2;
+    }
+
+    /* footer – refined secondary text */
+    footer {
+      color: #b4ccd6;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: #b7cdd9;
+    }
+
+    footer a:hover {
+      color: #eedbaa;
+    }
+
+    /* utility: subtle inline code style if needed */
+    code, pre {
+      background-color: #1d2b31;
+      color: #e6ddc2;
+      font-family: 'SF Mono', 'Courier New', monospace;
+    }
+
+    /* no layout, spacing, borders, margin, padding – only color/font/decoration */
+    /* all background-color and color updates, absolutely minimal but pro */
+  </style>
 </head>
 <body>
 
-  <!-- Page header: identifies the page purpose -->
+  <!-- Page header: identifies the page purpose – professional tone -->
   <header>
     <h1>Contact</h1>
+    <p style="color: #d1dfe6; font-size: 1.1rem;">
+      <span style="font-weight: 400;">Don Norman Lab ·</span> 
+      <span style="font-family: 'Inter', sans-serif; color: #cddee5;">enquiries and feedback</span>
+    </p>
   </header>
 
-  <!-- Primary navigation: identical structure across all pages -->
+  <!-- Primary navigation: identical structure across all pages, pro styling -->
   <nav aria-label="Primary navigation">
-    <ul>
+    <ul style="background-color: #1f2a2f;"> <!-- consistent deep slate -->
       <li><a href="index.html">Home</a></li>
       <li><a href="cv.html">CV</a></li>
-
-      <!-- Current page is indicated using aria-current -->
       <li><a href="contact.html" aria-current="page">Contact</a></li>
-
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
       <li><a href="assignment01.html">Lab 01 Rules</a></li>
-
     </ul>
   </nav>
 
@@ -40,22 +167,32 @@
 
         <!-- Label explicitly associated with its input -->
         <label for="subject">Subject</label><br>
-        <input type="text" id="subject" name="subject"><br><br>
+        <input type="text" id="subject" name="subject" placeholder="e.g., research inquiry"><br><br>
 
         <!-- Textarea with clear label for screen readers -->
         <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+        <textarea id="message" name="message" rows="5" cols="30" placeholder="your message ..."></textarea><br><br>
 
         <!-- Submit button is keyboard accessible by default -->
-        <button type="submit">Send</button>
+        <button type="submit">↦ Send Message</button>
       </fieldset>
 
     </form>
+
+    <!-- subtle professional touch: additional context, still minimal -->
+    <p style="color: #aec4cf; font-size: 0.94rem; font-style: italic;">
+      <!-- only color and font properties used -->
+      all fields are keyboard accessible · your message would be sent via POST
+    </p>
   </main>
 
   <!-- Footer provides supplementary information -->
   <footer>
-    <p>Keyboard accessible form with screen-reader friendly labels.</p>
+    <p>← <a href="index.html" style="text-decoration: none;">home</a> · 
+         <a href="cv.html" style="text-decoration: none;">cv</a> · 
+         <a href="analysis.html" style="text-decoration: none;">norman–goms</a>
+    </p>
+    <p style="color: #adc2cc;">professional dark · keyboard accessible form · screen‑reader friendly labels</p>
   </footer>
 
 </body>
